@@ -5,4 +5,4 @@ TODO:
 Setup folders with descriptions. 
 
 # Model bazy danych
-![](db_schema.png)
+![](03_schemat_bazy_danych/db_schema.png)
