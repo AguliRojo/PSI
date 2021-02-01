@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pogotowie</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CPR/style.css' %}">
+</head>
+<body>
+<nav>
+    <ul>
+        <li>
+            <a href="http://127.0.0.1:8000/admin/"> Admin </a>
+        </li>
+        <li>
+            <a href="http://localhost:8000/CPR/1/"> Pytanie 1</a>
+        </li>
+    </ul>
+</nav>
+    <img src="{% static "images/background.gif" %}"/>
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="{% url 'CPR:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+</body>
+</html>
