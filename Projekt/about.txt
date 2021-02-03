@@ -1,0 +1,1 @@
+Project is mad ewith Django and REST API
